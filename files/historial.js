@@ -53,7 +53,7 @@ function mostrarHistorial() {
 			const row = document.createElement("div");
 			row.classList.add("row","m-2");
 			const numero = document.createElement("div");
-			numero.innerHTML = `<h5>N°${index + 1}</h5>`;
+			numero.innerHTML = `<h5>➡</h5>`;
 			numero.classList.add("col-2","d-flex","justify-content-center","mt-auto", "mb-auto");
 			row.appendChild(numero);
 			
