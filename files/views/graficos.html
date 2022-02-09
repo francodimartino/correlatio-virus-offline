@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- <meta http-equiv="Expires" content="0">
+  		<meta http-equiv="Last-Modified" content="0">
+  		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  		<meta http-equiv="Pragma" content="no-cache"> -->
+
+	<script src="../library/chart.js" defer></script>
+	<link href="..\library\bootstrap.min.css" rel="stylesheet" />
+	<script src="../library/bootstrap.bundle.min.js" defer></script>
+	<script src="../library/sweetalert2@11.js" defer></script>
+	<script src="../datos.js" defer> </script>
+	<script src="../selects.js" defer> </script>
+	<script src="../listado.js" defer> </script>
+	<script src="../guardar.js" defer> </script>
+	<script src="../historial.js" defer></script>
+	<script src="../grafico.js" defer></script>
+	<script src="../eventos.js" defer></script>
+	<script src="../main.js" defer> </script>
+	<script src="../idioma.js" defer> </script>
+	<script src="../cmsm.js" defer> </script>
+	<link rel="stylesheet" href="../css/base.css">
+
+	<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+	<title>Correlatio Virus</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../../"><img class="" src="../img/logo.png" alt=""></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+
+					<a id="btn-abrir-pantalla-completa" class="item-navbar" href="#">PANTALLA COMPLETA</a>
+					<a id="btn-cerrar-pantalla-completa" class="item-navbar" href="#">CERRAR PANTALLA COMPLETA</a>
+					<a id="seccion-historial" class="item-navbar" type="button" data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" " href=" #">HISTORIAL </a>
+					<a id="nav-intro" class="item-navbar " href="../../">INTRO</a>
+					<a id="nav-notas" class="item-navbar " href="./mas-informacion.html">NOTAS</a>
+					<a id="nav-graficar" class="item-navbar " href="./graficos.html">GRAFICAR</a>
+					<a id="nav-contacto" class="item-navbar " href="./contacto.html">CONTACTO</a>
+					<a id="nav-descargar" class="item-navbar " href="#">DESCARGAR</a>
+					<a id="nav-idioma" class="item-navbar " href="#">ENGLISH</a>
+
+				</div>
+			</div>
+	</nav>
+	<section class="flex-lg-grow-1 d-flex">
+		<div class="row p-0 mx-0 flex-lg-grow-1 ">
+			<div id="columna-izq" class="col-lg-4 d-flex flex-column ">
+				<div class="flex-lg-grow-1">
+
+					<label id="label-region" class="p-1"></label>
+					<div id="opciones-region" class="mb-2"></div>
+
+					<label id="label-unidad" class="p-1"></label>
+					<div id="opciones-unidad" class="mb-5"></div>
+
+					<label id="label-tipo" class="p-1"></label>
+					<div id="opciones-tipo" class="mb-2"></div>
+
+					<label id="label-seleccionar" class="p-1">Paso 4: Click en Graficar</label>
+					<div id="seleccionar" class="btn btn-dark w-100">Graficar</div>
+					<div class="pt-3 px-2  text-end">
+						<label id="restantes">Restantes: </label>
+						<label id="contador-seleccionados"></label>
+					</div>
+					<div id="listado" class="list-group my-2"></div>
+
+				</div>
+
+				<div id="btn-guardar" class="btn btn-dark w-100 my-2 d-none">Imprimir / Grabar PDF</div>
+				<div id="btn-limpiar" class="btn btn-dark w-100 my-2 d-none">Volver</div>
+
+
+				<div class="mb-3">
+
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight"
+						aria-labelledby="offcanvasRightLabel">
+						<div class="offcanvas-header">
+							<h3 id="offcanvasRightLabel">Historial</h3>
+							<button id="cerrar-historial" type="button" class="btn-close text-reset"
+								data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<h5 id="guardados" class="text-end"></h5>
+							<div id="historial"></div>
+							<div id="eliminar-historial" class="btn btn-dark mt-3 w-100">Limpiar Historial</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-lg-8 p-0">
+
+				<div class="row justify-content-end">
+					<div id="btn-guardar-historial" class="btn btn-dark col-4 m-1 me-3 d-none">Guardar en Historial</div>
+					<div id="btn-instructivo" class="btn btn-dark col-4 m-1 me-3 d-none">Ver Instructivo</div>
+				</div>
+
+
+				<div class="d-block">
+
+
+					<div id="instructivo">
+					<div id="instructivo-es" class="d-block w-100 position-relative ">
+						<h3 class="text-center">INSTRUCTIVO PARA GRAFICAR</h3>
+						<div class="mx-3">
+							<p><div class="fw-bold fst-italic"> Paso 1:</div>	Seleccione la REGION sobre la que quiere trabajar. La más amplia es MUNDO y le da acceso a todos los países y subcontinentes. Si elije un subcontinente, en el siguiente paso sólo podrá acceder a los países incluidos en el mismo.</p>
+							<p><div class="fw-bold fst-italic"> Paso 2:</div>	Seleccione la unidad a graficar, puede ser un país o todo un subcontinente. Sólo podrá elegir una por vez.</p>
+							<p><div class="fw-bold fst-italic"> Paso 3:</div>	Seleccione el tipo de dato a graficar: </p>
+							<p class="d-inline">a) <p class="fw-bold text-decoration-underline d-inline fst-italic"> Contagios:</p> que serán representados en líneas continuas,</p>
+							<p class="d-inline">b) <p class="fw-bold text-decoration-underline d-inline fst-italic"> Muertes:</p> que serán representadas en líneas de puntos.</p>
+							<p><div class="fw-bold fst-italic"> Paso 4:</div> 	Presione <p class="fw-bold text-decoration-underline d-inline fst-italic">Graficar</p> para generar en pantalla el gráfico.  </p>
+							<p class="d-inline">puede agregar otros elementos que desee comparar con lo elegido y ser incluidos en el mismo gráfico. Para ello repita los pasos 1 a 4 por cada nuevo elemento a incluir. Cada vez que pulse <p class="fw-bold text-decoration-underline d-inline fst-italic">Graficar</p>  , el grafico se actualizara y el contador le indicará cuántos más puede agregar hasta un límite de 8 elementos a graficar.  </p>
+							<p><div class="fw-bold fst-italic"> Paso 5:</div>	Presione <p class="fw-bold text-decoration-underline d-inline fst-italic">Imprimir / Grabar PDF</p> y elija si desea imprimir el gráfico final o si desea grabarlo en su ordenador como archivo PDF (en tal caso deberá darle un nombre y un destino al archivo). </p>
+							<p class="d-inline"><div class="fw-bold fst-italic"> Paso 6:</div>	Presione <p class="fw-bold text-decoration-underline d-inline fst-italic">Guardar en historial</p> para guardar el grafico actual en el historial. Luego, puede acceder a él a través del botón <p class="fw-bold text-decoration-underline d-inline fst-italic">Historial</p>  del menú superior.</p>
+							
+
+						</div>
+
+
+
+					</div>
+					<div id="instructivo-en" class="d-block w-100 position-relative d-none">
+						<h3 class="text-center">INSTRUCTIONS FOR GRAPHING</h3>
+						<div class="mx-3">
+							<p><div class="fw-bold fst-italic"> Step 1:</div>	Select the REGION on which you want to work. The widest is WORLD and gives you access to all countries and subcontinents. If you choose a subcontinent, in the next step you will only be able to access the countries included in it.</p>
+							<p><div class="fw-bold fst-italic"> Step 2:</div>	Select the unit to graph, it can be a country or an entire subcontinent. You can only choose one at a time.</p>
+							<p><div class="fw-bold fst-italic"> Step 3:</div>	Select the type of data to graph: </p>
+							<p class="d-inline">a) <p class="fw-bold text-decoration-underline d-inline fst-italic"> Infections:</p> which will be represented in continuous lines,</p>
+							<p class="d-inline">b) <p class="fw-bold text-decoration-underline d-inline fst-italic"> Deaths:</p> which will be represented in dotted lines.</p>
+							<p><div class="fw-bold fst-italic"> Step 4:</div> 	Press  <p class="fw-bold text-decoration-underline d-inline fst-italic">Graph </p> to generate the graph on the screen. </p>
+							<p class="d-inline">you can add other elements that you want to compare with the chosen one and that are included in the same graph. To do this, repeat steps 1 through 4 for each new item you want to include. Each time you press Graph, the graph will update and the counter will tell you how many more you can add up to a limit of 8 items to graph.  </p>
+							<p><div class="fw-bold fst-italic"> Step 5:</div>	Press  <p class="fw-bold text-decoration-underline d-inline fst-italic">Print / Save PDF</p> and choose if you want to print the final graphic or if you want to save it on your computer as a PDF file (in this case you will have to give the file a name and a destination). </p>
+							<p class="d-inline"><div class="fw-bold fst-italic"> Step 6:</div>	Press <p class="fw-bold text-decoration-underline d-inline fst-italic">Save to History</p> to save the current graph to history. You can then access it through the  <p class="fw-bold text-decoration-underline d-inline fst-italic">History</p>  button on the top menu.</p>
+							
+
+						</div>
+					</div>
+				</div>
+
+					<div id="canvas" class="d-none">
+						<canvas id="myChart"></canvas>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="mt-auto">
+		<!-- Copyright -->
+
+		<div class="text-center p-2 text-white bg-dark">
+			<div id="correlatio-virus" class="mb-2">
+				CORRELATIO VIRUS (2020-2021) es de uso universal, libre y gratuito. Patagonia Argentina - 07 de
+				Febrero de 2022.
+			</div>
+			<div  class="d-inline">Idea:</div> Daniel Esquiroz | <div id="programadores" class="d-inline">
+				Programadores:</div><a class="text-decoration-none link-light" href="https://github.com/juan-chapur">
+				Juan Chapur</a> - <a class="text-decoration-none link-light"
+				href="https://github.com/francoDiMartino">Franco Di
+				Martino</a> | <div id="derechos" class="d-inline"> Todos los derechos Reservados</div> &copy;
+		</div>
+		<!-- Copyright -->
+	</footer>
+</body>
+
+</html>

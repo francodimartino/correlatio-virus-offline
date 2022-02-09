@@ -1,0 +1,134 @@
+body{
+	overflow-x: hidden;
+}
+
+.navbar-brand > img {
+	height: auto;
+	width: 8rem;
+	padding-top: 10px;
+}
+.navbar-brand {
+	padding: 0px;
+	height: 100%;
+}
+
+.imagenes {
+	height: auto;
+	width: 50%;
+}
+
+.test {
+	border: 1px solid red;
+}
+
+.item-navbar {
+	color: white;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	height: 4em;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.item-navbar:hover {
+	background-color: rgba(101, 147, 179);
+	color: white;
+}
+
+.item-activo {
+	background-color: rgba(255, 255, 255, 0.856);
+	color: black;
+}
+
+.fondo {
+	/* background-color: #d1d0d0; */
+	color: #fcfcfc;
+	background-color: #161618;
+	
+	
+}
+
+.links-fuentes li a {
+	/* background-color: #d1d0d0; */
+	color: black;
+	text-decoration: none;
+	
+	
+}
+
+ul.fuera-puntos {
+	list-style-type: none;
+}
+
+select option:checked {
+	background: #00ff00;
+}
+
+.bodoni {
+	font-family: "Bodoni MT", serif;
+	font-weight: bold;
+}
+
+.fs-7{
+	font-size: 0.85em;
+}
+
+.card-img-top {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Scroll */
+.scrolldown-wrapper {
+	color: #000;
+	left: 95%;
+	position: fixed;
+	bottom: 0;
+	transform: translate(-50%, -50%);
+	background-color: rgb(101, 147, 179);
+	justify-content: end;
+	border-radius: 15px;
+	padding: 1%;
+}
+  
+.scrolldown {
+	border: 2px solid #000;
+	border-radius: 30px;
+	height: 46px;
+	margin: 0 auto 8px;
+	text-align: center;
+	width: 30px;
+}
+
+.scrolldown-p1,
+.scrolldown-p2 {
+	animation-duration: 1.5s;
+	animation-name: scrolldown;
+	animation-iteration-count: infinite;
+	fill: #000;
+}
+  
+.scrolldown-p2 {
+	animation-delay: .75s;
+}
+
+@keyframes scrolldown {
+	0% {
+		opacity: 0;
+		transform: translate(0, -8px);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0, 8px);
+	}
+}
+
+.cursor {
+	cursor: pointer;
+}
