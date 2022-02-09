@@ -12,7 +12,7 @@ function mostrarListado() {
             eliminarElemento(element);
             
             if (datosSeleccionados.length==0){
-                toggleInstructivo("grafico")
+                toggleInstructivo()
                 if(!document.getElementById("btn-guardar").classList.contains("d-none") ){
                     document.getElementById("btn-guardar").classList.add("d-none")
             
@@ -39,7 +39,11 @@ function eliminarElemento(element) {
 
     mostrarListado();
     if(datosSeleccionados.length==0){
+        ocultarGrafico();
+        ocultarBotones();
         document.getElementById("btn-limpiar").classList.add("d-none")
+        
+        
         
     }
 }
@@ -54,10 +58,9 @@ function limpiarListado() {
 
     mostrarListado();
     
-    toggleInstructivo("grafico")
-    if(!document.getElementById("btn-guardar").classList.contains("d-none") ){
-        document.getElementById("btn-guardar").classList.add("d-none")
-
-    }
+    ocultarGrafico();
+    ocultarBotones();
+    
+    
     
 }

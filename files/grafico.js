@@ -228,13 +228,15 @@ function graficar() {
     
     graficoMostrado=myChart
     if(document.getElementById("canvas").classList.contains("d-none")) {
-        toggleInstructivo("grafico");
+        mostrarGrafico()
+        document.getElementById("btn-instructivo").textContent="Ver Instructivo"
     }
     //esperar a que se cargue el grafico
     
         setTimeout(() => {
             if(datosSeleccionados.length!=0){
-                document.getElementById("btn-guardar").classList.remove("d-none");
+                mostrarBotones();
+                
             }
  }, DELAYGRAFICACION*data.labels.length);
 
@@ -247,17 +249,7 @@ function graficar() {
 }
 
 
-function toggleInstructivo(lugar){
-    if(lugar=="grafico"){
-        document.getElementById("btn-instructivo").classList.toggle("d-none");
-        document.getElementById("btn-instructivo").classList.toggle("d-block");
-        document.getElementById("btn-guardar-historial").classList.toggle("d-none");
-    }
-    const instruc = document.getElementById("instructivo");
-    const canvas = document.getElementById("canvas");
-    instruc.classList.toggle("d-none");
-    canvas.classList.toggle("d-none");
-}
+
 
 
 
@@ -299,6 +291,50 @@ function cargarOpcionesPantallaCompleta() {
 		btnCerrarPantallaCompleta.classList.toggle("d-none");
 		btnAbrirPantallaCompleta.classList.toggle("d-none");
 	});
+}
+
+
+function mostrarGrafico() {
+    if(document.getElementById("canvas").classList.contains("d-none")) {
+        document.getElementById("canvas").classList.remove("d-none");
+        document.getElementById("instructivo").classList.add("d-none");
+    }
+    
+}
+
+function ocultarGrafico() {
+    if(!document.getElementById("canvas").classList.contains("d-none")) {
+        document.getElementById("canvas").classList.add("d-none");
+        document.getElementById("instructivo").classList.remove("d-none");
+    }
+}
+
+function ocultarBotones(parametro) {
+    if(!document.getElementById("btn-guardar").classList.contains("d-none")) {
+        document.getElementById("btn-guardar").classList.add("d-none")
+    }
+    if(!document.getElementById("btn-instructivo").classList.contains("d-none") && parametro!="botonInstructivo") {
+        document.getElementById("btn-instructivo").classList.add("d-none")
+    }
+    if(!document.getElementById("btn-guardar-historial").classList.contains("d-none")) {
+            document.getElementById("btn-guardar-historial").classList.add("d-none")
+    }
+            
+    
+}
+function mostrarBotones() {
+    console.log("mostrar botones");
+    if(document.getElementById("btn-guardar").classList.contains("d-none")) {
+        document.getElementById("btn-guardar").classList.remove("d-none")
+    }
+    if(document.getElementById("btn-guardar-historial").classList.contains("d-none")) {
+        document.getElementById("btn-guardar-historial").classList.remove("d-none")
+    }
+    if(document.getElementById("btn-instructivo").classList.contains("d-none")) {
+        document.getElementById("btn-instructivo").classList.remove("d-none")
+    }
+        
+    
 }
 
 

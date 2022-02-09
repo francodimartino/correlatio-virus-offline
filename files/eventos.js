@@ -45,10 +45,14 @@ try {
 try{
     let botonInstructivo=document.getElementById("btn-instructivo");
     botonInstructivo.addEventListener("click", ()=>{
-        toggleInstructivo();
+        
         if(botonInstructivo.textContent == "Ver Instructivo"){
+            ocultarGrafico();
+            ocultarBotones("botonInstructivo");
             botonInstructivo.textContent = "Volver a Grafico";
         }else{
+            mostrarGrafico();
+            mostrarBotones();
             botonInstructivo.textContent = "Ver Instructivo";
 
         }
