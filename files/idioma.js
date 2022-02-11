@@ -50,7 +50,7 @@ if (idioma == "en") {
 function aplicarTextos() {
    
 		try {
-			console.log("hola");
+			
 			document.getElementById("introduccion-texto-es").classList.add("d-none");
 			document.getElementById("introduccion-texto-en").classList.remove("d-none");
 			document.getElementById("intro-texto-es").classList.add("d-none");

@@ -34,9 +34,42 @@ function cargarHistorial(conjunto) {
 		if (historial.length > MAX_HISTORIAL) {
 			historial.pop();
 		}
+		
 		localStorage.setItem("historialvirus", JSON.stringify(historial));
 		mostrarHistorial();
+		mostrarAlertaCargaHistorial(conjunto)
+	}else{
+		mostrarErrorCargaHistorial(conjunto)
 	}
+}
+
+
+function mostrarAlertaCargaHistorial(conjunto) {
+	let textoAlert=""
+	conjunto.forEach((elemento) => {
+		textoAlert += `${elemento.tipo} - ${elemento.unidad}<br> `
+	});
+	
+
+	Swal.fire({
+		icon: "success",
+		title: "GUARDADO EN HISTORIAL",
+		html: textoAlert,
+	});
+}
+
+function mostrarErrorCargaHistorial(conjunto) {
+	let textoAlert=""
+	conjunto.forEach((elemento) => {
+		textoAlert += `${elemento.tipo} - ${elemento.unidad}<br> `
+	});
+	
+
+	Swal.fire({
+		icon: "error",
+		title: "ESTE GRAFICO ES EL ULTIMO GUARDADO",
+		html: textoAlert,
+	});
 }
 
 function mostrarHistorial() {

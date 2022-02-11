@@ -323,7 +323,7 @@ function ocultarBotones(parametro) {
     
 }
 function mostrarBotones() {
-    console.log("mostrar botones");
+    
     if(document.getElementById("btn-guardar").classList.contains("d-none")) {
         document.getElementById("btn-guardar").classList.remove("d-none")
     }

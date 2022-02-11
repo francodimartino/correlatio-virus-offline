@@ -56,7 +56,7 @@ function detectarCelu() {
 
 function descargarImagen() {
 
-    console.log(graficoMostrado);
+    
     let fecha=new Date();
     // del objeto fecha "lunes 21 de febrero de 2022 a las 12:00"
     let fechaString = fecha.toLocaleString();
