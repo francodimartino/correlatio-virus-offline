@@ -23,6 +23,7 @@ const variablesEstaticas = {
 		{ "programadores": "Programmers: " },
 		{ "derechos": "All rights reserved." },
 		{ "btn-guardar-historial": "Save to History" },
+		{"equipo-trabajo": "Team Work" },
 	],
     es: [
         //  { "label-categorias": "Variable for reference by areas" },
