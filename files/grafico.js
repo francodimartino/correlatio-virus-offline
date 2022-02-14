@@ -218,7 +218,34 @@ function graficar() {
                     ctx.fillRect(0, 0, chart.canvas.width, chart.canvas.height);
 
                     ctx.restore();
-                    //watermark
+                   
+                    let image = new Image();
+                    image.src = "../img/logoIntro.png";
+                    if (image.complete) {
+                        const ctx = chart.ctx;
+                        const { top, left, width, height } = chart.chartArea;
+                        //mantener la relación de aspecto de la imagen con el canvas
+                        let newWidth;
+                        if (window.innerWidth > 450) {
+                            newWidth = chart.canvas.width / 10;
+                        } else {
+                            newWidth = chart.canvas.width / 30;
+                        }
+                        const newHeight =
+                            (image.height * newWidth) / image.width;
+                        const newLeft = left + (width - newWidth);
+                        const newTop = top + (height - newHeight);
+                        // fin mantener la relación de aspecto de la imagen con el canvas
+                        ctx.drawImage(
+                            image,
+                            newLeft,
+                            newTop,
+                            newWidth,
+                            newHeight
+                        );
+                    } else {
+                        image.onload = () => chart.draw();
+                    }
                     
                 },
                 
