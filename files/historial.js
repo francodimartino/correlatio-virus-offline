@@ -79,7 +79,11 @@ function mostrarHistorial() {
 	lista.innerHTML = "";
 	if (historial.length > 0) {
 		document.getElementById("eliminar-historial").classList.remove("d-none");
-		document.getElementById("guardados").textContent = `Guardados: ${historial.length} de ${MAX_HISTORIAL}`;
+		let palabraGuardados= idioma=="en"?"Saved":"Guardados"
+		let palabraDe= idioma=="en"?"From":"De"
+		document.getElementById("cantidad-historial").textContent = ` ${historial.length} `;
+		document.getElementById("total-historial").textContent = ` ${MAX_HISTORIAL} `;
+
 		historial.forEach((conjunto, index) => {
 			//  conjunto es asi {tipo: 'CONTAGIOS', unidad: 'AFGANISTAN', figura: 'circle', linea: 'continua', color: 'rgb(0, 0, 255)'}
 			const div = document.createElement("div");

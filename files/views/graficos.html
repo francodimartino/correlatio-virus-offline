@@ -19,11 +19,11 @@
 	<script src="../selects.js" defer> </script>
 	<script src="../listado.js" defer> </script>
 	<script src="../guardar.js" defer> </script>
+	<script src="../idioma.js" defer> </script>
 	<script src="../historial.js" defer></script>
 	<script src="../grafico.js" defer></script>
 	<script src="../eventos.js" defer></script>
 	<script src="../main.js" defer> </script>
-	<script src="../idioma.js" defer> </script>
 	<script src="../cmsm.js" defer> </script>
 	<link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../css/graficos.css">
@@ -95,7 +95,11 @@
 								data-bs-dismiss="offcanvas" aria-label="Close"></button>
 						</div>
 						<div class="offcanvas-body">
-							<h5 id="guardados" class="text-end"></h5>
+							<div class="text-end">
+
+								<h5 id="guardados" class="text-end d-inline">Guardados: </h5><h5 id="cantidad-historial" class="text-end d-inline"></h5><h5 id="de-historial" class="text-end d-inline">de</h5><h5 id="total-historial" class="text-end d-inline"></h5>
+								
+							</div>
 							<div id="historial"></div>
 							<div id="eliminar-historial" class="btn btn-dark mt-3 w-100">Limpiar Historial</div>
 						</div>
