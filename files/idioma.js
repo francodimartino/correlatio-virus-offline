@@ -28,6 +28,10 @@ const variablesEstaticas = {
 		{"offcanvasRightLabel": "History" },
 		{"guardados": "Saved:" },
 		{"de-historial": "from" },
+		{"idea-investigacion": "Idea and Research" },
+		{"developing1": "Developing" },
+		{"developing2": "Developing" },
+		{"sociologyst": "Sociologyst" },
 		
 	],
     es: [
