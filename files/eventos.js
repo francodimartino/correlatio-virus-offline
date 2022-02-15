@@ -45,15 +45,18 @@ try {
 try{
     let botonInstructivo=document.getElementById("btn-instructivo");
     botonInstructivo.addEventListener("click", ()=>{
+
+        let verInstructivo=idioma=="es"?"Ver Instructivo":"Show Instructive";
+        let volverAGrafico=idioma=="es"?"Volver a Grafico":"Back to Graphic";
         
-        if(botonInstructivo.textContent == "Ver Instructivo"){
+        if(botonInstructivo.textContent == verInstructivo){
             ocultarGrafico();
             ocultarBotones("botonInstructivo");
-            botonInstructivo.textContent = "Volver a Grafico";
+            botonInstructivo.textContent = volverAGrafico;
         }else{
             mostrarGrafico();
             mostrarBotones();
-            botonInstructivo.textContent = "Ver Instructivo";
+            botonInstructivo.textContent = verInstructivo;
 
         }
     });

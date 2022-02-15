@@ -24,6 +24,11 @@ const variablesEstaticas = {
 		{ "derechos": "All rights reserved." },
 		{ "btn-guardar-historial": "Save to History" },
 		{"equipo-trabajo": "Team Work" },
+		{"eliminar-historial": "Clean History" },
+		{"offcanvasRightLabel": "History" },
+		{"guardados": "Saved:" },
+		{"de-historial": "from" },
+		
 	],
     es: [
         //  { "label-categorias": "Variable for reference by areas" },

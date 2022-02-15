@@ -256,7 +256,8 @@ function graficar() {
     graficoMostrado=myChart
     if(document.getElementById("canvas").classList.contains("d-none")) {
         mostrarGrafico()
-        document.getElementById("btn-instructivo").textContent="Ver Instructivo"
+        let verInstructivo= idioma=="es" ? "Ver Instructivo" : "Show Instructive"
+        document.getElementById("btn-instructivo").textContent=verInstructivo
     }
     //esperar a que se cargue el grafico
     
