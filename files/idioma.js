@@ -27,7 +27,7 @@ const variablesEstaticas = {
 		{ derechos: "All rights reserved." },
 		{ "btn-guardar-historial": "Save to History" },
 		{"equipo-trabajo": "Team Work" },
-		{"eliminar-historial": "Clean History" },
+		{"eliminar-historial": "Clear History" },
 		{"offcanvasRightLabel": "History" },
 		{"guardados": "Saved:" },
 		{"de-historial": "from" },
