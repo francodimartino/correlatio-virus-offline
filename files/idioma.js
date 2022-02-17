@@ -19,6 +19,7 @@ const variablesEstaticas = {
 		{ "seccion-historial": "HISTORY" },
 		{ "btn-abrir-pantalla-completa": "FULLSCREEN" },
 		{ "btn-cerrar-pantalla-completa": "CLOSE FULLSCREEN" },
+	
 		{
 			"correlatio-virus":
 				"CORRELATIO VIRUS (2020-2021) is universal, free and free to use. Trelew - Patagonia Argentina - February 7th, 2022.",
@@ -66,7 +67,7 @@ function existeElementoYEstaMostrado(id) {
 }
 
 function aplicarTextos() {
-	const idTextos = ["introduccion-texto", "intro-texto", "mas-informacion-texto", "instructivo-en"]
+	const idTextos = ["introduccion-texto", "intro-texto", "mas-informacion-texto", "instructivo"]
 	if (idioma == "en") {
 		idTextos.forEach((id) => {
 			if (existeElementoYEstaOculo(`${id}-en`)) {

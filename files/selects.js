@@ -12,8 +12,7 @@ function cargarTipos(tipos){
         opcion.classList.add("fw-bold");
         select.appendChild(opcion);
     });
-    // document.getElementById("label-tipo").innerHTML = traducirLabel("Tipo"); CONULTAR LINEA ¿Deberiamos traer la logica de traducir label?
-    document.getElementById("label-tipo").innerHTML = "Paso 3: Tipo de dato";
+    
 	document.getElementById("opciones-tipo").appendChild(select);
 }
 
@@ -44,8 +43,8 @@ function cargarRegiones(regiones, unidadesInformacion) {
         }
     });
 
-    // document.getElementById("label-tipo").innerHTML = traducirLabel("Tipo"); CONULTAR LINEA ¿Deberiamos traer la logica de traducir label?
-    document.getElementById("label-region").innerHTML = "Paso 1: Región";
+    
+    
 	document.getElementById("opciones-region").appendChild(select);
 
     const e = new Event("change");
@@ -76,8 +75,7 @@ function cargarUnidadesInformacion(unidadesInformacion) {
 		container.appendChild(select);
 	}
     
-    // document.getElementById("label-tipo").innerHTML = traducirLabel("Tipo"); CONULTAR LINEA ¿Deberiamos traer la logica de traducir label?
-    document.getElementById("label-unidad").innerHTML = "Paso 2: Unidad de información";
+    
 	document.getElementById("opciones-unidad").appendChild(select);
 }
 //  cargarRegiones(["America del sur", "America del norte"], [{region: "America del sur", unidad:"Argentina"}, {region: "America del norte", unidad:"Estados Unidos"}])
