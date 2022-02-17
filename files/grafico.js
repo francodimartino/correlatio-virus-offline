@@ -220,7 +220,7 @@ function graficar() {
                     ctx.restore();
                    
                     let image = new Image();
-                    image.src = "../img/logoIntro.png";
+                    image.src = "../img/watermark.png";
                     if (image.complete) {
                         const ctx = chart.ctx;
                         const { top, left, width, height } = chart.chartArea;
