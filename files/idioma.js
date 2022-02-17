@@ -36,6 +36,8 @@ const variablesEstaticas = {
 		{"developing1": "Developing" },
 		{"developing2": "Developing" },
 		{"sociologyst": "Sociologyst" },
+		{"volver": "Back" },
+		{"leer-mas": "See more" },
 	],
 	es: [
 		//  { "label-categorias": "Variable for reference by areas" },

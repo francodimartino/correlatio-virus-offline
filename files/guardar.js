@@ -18,8 +18,8 @@ function guardarImagen() {
         
         Swal.fire({
             icon: "error",
-            title: "ATENCIÓN",
-            text: "NO HAY DATOS DISPONIBLES PARA GRAFICAR",
+            title: idioma=="es"? "ATENCIÓN": "ATTENTION",
+            text: idioma=="es"? "NO HAY DATOS DISPONIBLES PARA GRAFICAR": "NO DATA AVAILABLE TO GRAPH",
         });
     }
 }
@@ -99,8 +99,8 @@ function descargarImagen() {
         alert("");
         Swal.fire({
             icon: 'error',
-            title: 'ATENCIÓN',
-            text: 'NO HAY DATOS DISPONIBLES PARA GRAFICAR'
+            title: idioma=="es"?'ATENCIÓN':'ATTENTION',
+            text: idioma=="es"?'NO HAY DATOS DISPONIBLES PARA GRAFICAR':'NO DATA AVAILABLE TO GRAPH',
           })
     }
 }

@@ -84,14 +84,14 @@ function seleccionarDato(elemento) {
     if (datosSeleccionados.length == 8) {
         Swal.fire({
             icon: "error",
-            title: "ATENCIÓN",
-            text: "Solo puede graficar 8 datos",
+            title: idioma=="es"? "ATENCIÓN":"ATTENTION",
+            text: idioma=="es"? "Solo puede graficar 8 datos":"You can only graph 8 data",
         });
     } else if (encontrado) {
         Swal.fire({
             icon: "error",
-            title: "ATENCIÓN",
-            text: "La información deseada ya se encuentra seleccionada",
+            title: idioma=="es"?"ATENCIÓN":"ATTENTION",
+            text: idioma=="es"? "La información deseada ya se encuentra seleccionada":"The information desired is already selected",
         });
     } else {
         let figura = obtenerFiguraDisponible();

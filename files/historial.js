@@ -53,7 +53,7 @@ function mostrarAlertaCargaHistorial(conjunto) {
 
 	Swal.fire({
 		icon: "success",
-		title: "GUARDADO EN HISTORIAL",
+		title: idioma=="es"?"GUARDADO EN HISTORIAL":"SAVED IN HISTORY",
 		html: textoAlert,
 	});
 }
@@ -67,7 +67,7 @@ function mostrarErrorCargaHistorial(conjunto) {
 
 	Swal.fire({
 		icon: "error",
-		title: "ESTE GRAFICO ES EL ULTIMO GUARDADO",
+		title: idioma=="es"? "ESTE GRAFICO ES EL ULTIMO GUARDADO":"THIS GRAPH IS THE LAST SAVED",
 		html: textoAlert,
 	});
 }
