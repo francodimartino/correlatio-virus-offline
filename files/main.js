@@ -15,9 +15,9 @@ const coloresDisponibles = [
     "rgb(125, 125, 125)",
 ];
 
+
 buscarDatos();
 cargarTipos(datosDinamicos.tipos)
-cargarRegiones(datosDinamicos.regiones, datosDinamicos.unidades)
 cargarUnidadesInformacion(datosDinamicos.unidades)
 cambiarContadorSeleccionados();
 mostrarHistorial();

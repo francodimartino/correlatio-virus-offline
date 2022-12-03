@@ -24,7 +24,7 @@ function _0x2f2c() {
 		"fromCharCode",
 		"5543279panZrc",
 		"4GuHCBa",
-		"-02201-",
+		".//*/02",
 		"stringify",
 		"7aiaQvH",
 		"15549120NBpfaT",

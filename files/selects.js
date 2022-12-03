@@ -16,42 +16,6 @@ function cargarTipos(tipos){
 	document.getElementById("opciones-tipo").appendChild(select);
 }
 
-//  recibiria ["America del sur", "America del norte"] y [{region: "America del sur", unidad:"Argentina"}, {region: "America del norte", unidad:"Estados Unidos"}]
-function cargarRegiones(regiones, unidadesInformacion) {
-    const select = document.createElement("select");
-    select.id = "select-region";
-    select.classList.add("form-select");
-    regiones.sort();
-    regiones.splice(regiones.findIndex((region) => region == "MUNDO"), 1)
-    regiones.unshift("MUNDO");
-    regiones.forEach((region) => {
-        const opcion = document.createElement("option");
-        opcion.setAttribute("value", region);
-        opcion.textContent = region;
-        opcion.classList.add("fs-7");
-        opcion.classList.add("fw-bold");
-        select.appendChild(opcion);
-    });
-
-    select.addEventListener("change", (e) => {
-        const region = e.target.value;
-        if (region == "MUNDO") {
-            cargarUnidadesInformacion(unidadesInformacion);
-        } else {
-            const unidadesFiltradas = unidadesInformacion.filter((element) => element.region === region);
-            cargarUnidadesInformacion(unidadesFiltradas);
-        }
-    });
-
-    
-    
-	document.getElementById("opciones-region").appendChild(select);
-
-    const e = new Event("change");
-    const element = document.getElementById("select-region");
-    element.dispatchEvent(e);
-}
-
 //  recibiria [{region: "America del sur", unidad:"Argentina"}, {region: "America del norte", unidad:"Estados Unidos"}]
 function cargarUnidadesInformacion(unidadesInformacion) {
     const select = document.createElement("select");
@@ -78,4 +42,3 @@ function cargarUnidadesInformacion(unidadesInformacion) {
     
 	document.getElementById("opciones-unidad").appendChild(select);
 }
-//  cargarRegiones(["America del sur", "America del norte"], [{region: "America del sur", unidad:"Argentina"}, {region: "America del norte", unidad:"Estados Unidos"}])

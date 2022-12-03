@@ -66,6 +66,17 @@ function armarData(datosCrudos) {
         "OCT21",
         "NOV21",
         "DIC21",
+        "ENE22",
+        "FEB22",
+        "MAR22",
+        "ABR22",
+        "MAY22",
+        "JUN22",
+        "JUL22",
+        "AGO22",
+        "SEP22",
+        "OCT22",
+        
     ];
 
     const datasets = [];

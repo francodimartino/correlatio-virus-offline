@@ -1,7 +1,12 @@
+function storageIdiomaEspaniol() {
+    localStorage.setItem("idioma", "es");
+}
+
+storageIdiomaEspaniol()
+
+
 const variablesEstaticas = {
 	en: [
-		//  { "label-categorias": "Variable for reference by areas" },
-		{ "label-region": "Step 1: Region" },
 		{ "label-unidad": "Step 2: Unit to Graph" },
 		{ "label-tipo": "Step 3: Type of Data" },
 		{ "label-seleccionar": "Step 4: Click to Graph" },
@@ -19,6 +24,8 @@ const variablesEstaticas = {
 		{ "seccion-historial": "HISTORY" },
 		{ "btn-abrir-pantalla-completa": "FULLSCREEN" },
 		{ "btn-cerrar-pantalla-completa": "CLOSE FULLSCREEN" },
+		{ "volver": "Back" },
+		{ "leer-mas": "See more" },
 	
 		{
 			"correlatio-virus":
@@ -36,8 +43,6 @@ const variablesEstaticas = {
 		{"developing1": "Developing" },
 		{"developing2": "Developing" },
 		{"sociologyst": "Sociologyst" },
-		{"volver": "Back" },
-		{"leer-mas": "See more" },
 	],
 	es: [
 		//  { "label-categorias": "Variable for reference by areas" },
